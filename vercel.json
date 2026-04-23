@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/playlist.json", "dest": "/public/playlist.json" },
+    { "src": "/player", "dest": "/public/player.html" }
+  ]
+}
