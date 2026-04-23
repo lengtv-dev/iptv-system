@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IPTV Player</title>
+</head>
+<body>
+
+<h2>📺 IPTV Player</h2>
+<video id="video" controls width="100%"></video>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+const video = document.getElementById("video");
+
+// โหลด playlist JSON
+fetch("/playlist.json")
+  .then(res => res.json())
+  .then(data => {
+    const first = data.channels[0];
+
+    const url = `/api/proxy?url=${encodeURIComponent(first.url)}`;
+
+    if (Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(url);
+      hls.attachMedia(video);
+    }
+  });
+</script>
+
+</body>
+</html>
