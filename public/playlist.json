@@ -1,0 +1,16 @@
+{
+  "channels": [
+    {
+      "name": "MONOMAX",
+      "logo": "https://dookeela4.live/uploads/1664802455.png",
+      "group": "Movie",
+      "url": "https://cdn1.googlecdnforstreaming.live/live/tsp2/chunks.m3u8"
+    },
+    {
+      "name": "Sport Live",
+      "logo": "https://dookeela4.live/uploads/1664802455.png",
+      "group": "Sport",
+      "url": "https://cdn1.googlecdnforstreaming.live/live/tsp3/chunks.m3u8"
+    }
+  ]
+}
